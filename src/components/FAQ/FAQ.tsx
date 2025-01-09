@@ -6,6 +6,7 @@ interface FAQItem {
   question: string;
   answer: string;
 }
+// this faq
 
 const faqData: FAQItem[] = [
   {

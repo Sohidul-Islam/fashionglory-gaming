@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
             <p>License No: 8048/JAZ2019-015</p>
           </div>
           <div className="copyright">
-            <p>&copy; 2024 GloryBet. All rights reserved.</p>
+            <p>&copy; 2025 GloryBet. All rights reserved.</p>
           </div>
         </div>
       </div>

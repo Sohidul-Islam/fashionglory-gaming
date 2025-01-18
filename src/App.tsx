@@ -9,6 +9,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Hero } from "./components/Hero/Hero";
 import { FAQ } from "./components/FAQ/FAQ";
 import { Footer } from "./components/Footer/Footer";
+import { TopBar } from "./components/Navbar/Topbar";
 
 function App() {
   const crashGames = [
@@ -631,7 +632,10 @@ function App() {
 
   return (
     <>
-      <Navbar />
+  <div className="navbar-container">
+  <TopBar />
+  <Navbar />
+  </div>
       <div className="app-container">
         <Hero />
         <GameSlider title="CRASH GAMES" games={crashGames} />

@@ -249,3 +249,20 @@
     }
   }
 }
+
+
+.brand {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+
+
+.mobile-only {
+  display: none !important;
+
+  @media (max-width: 1024px) {
+    display: block !important;
+  }
+}

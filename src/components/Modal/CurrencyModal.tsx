@@ -72,9 +72,9 @@ export const CurrencyModal: React.FC<CurrencyModalProps> = ({
               <div
                 key={lang.code}
                 className={`language-option ${
-                  value.language === lang.code ? "selected" : ""
+                  value.language === lang.name ? "selected" : ""
                 }`}
-                onClick={() => handleLanguageSelect(lang.code)}
+                onClick={() => handleLanguageSelect(lang.name)}
               >
                 <span className="language-name">{lang.name}</span>
               </div>

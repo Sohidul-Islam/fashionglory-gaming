@@ -70,41 +70,53 @@
   }
 }
 
-// Responsiveness
-@media screen and (max-width: 768px) {
-  .top-navbar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem;
 
-    &__left,
-    &__right {
-      justify-content: space-between;
-      gap: 1rem;
-    }
+@media screen and (max-width: 1023px) {
+  .top-navbar {
+    display: none;
+  }
+  .top-navbar__right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .top-navbar {
-    font-size: 0.9rem;
+// // Responsiveness
+// @media screen and (max-width: 768px) {
+//   .top-navbar {
+//     flex-direction: column;
+//     align-items: stretch;
+//     padding: 1rem;
 
-    &__left__item,
-    &__right__item {
-      gap: 0.4rem;
+//     &__left,
+//     &__right {
+//       justify-content: space-between;
+//       gap: 1rem;
+//     }
+//   }
+// }
 
-      span {
-        font-size: 0.8rem;
-      }
+// @media screen and (max-width: 480px) {
+//   .top-navbar {
+//     font-size: 0.9rem;
 
-      svg {
-        font-size: 1rem;
-      }
-    }
+//     &__left__item,
+//     &__right__item {
+//       gap: 0.4rem;
 
-    .currency-selector select {
-      padding: 0.3rem 0.8rem;
-      font-size: 0.85rem;
-    }
-  }
-}
+//       span {
+//         font-size: 0.8rem;
+//       }
+
+//       svg {
+//         font-size: 1rem;
+//       }
+//     }
+
+//     .currency-selector select {
+//       padding: 0.3rem 0.8rem;
+//       font-size: 0.85rem;
+//     }
+//   }
+// }

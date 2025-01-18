@@ -1,0 +1,105 @@
+.notice-board-card {
+  background: transparent; // Let the dark application background show through
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+  position: relative;
+
+  &__container{
+    display: flex;
+    // flex-direction: r;
+    gap: 1rem;
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #00ffd0; // Vibrant header color
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 255, 208, 0.6);
+  }
+
+  &__marquee {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll-right 12s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    &.paused {
+      animation-play-state: paused;
+    }
+  }
+
+  &__item {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    min-width: 220px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .player-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00ffd0; // Highlighted player name
+      text-shadow: 0 2px 5px rgba(0, 255, 208, 0.6);
+    }
+
+    .player-win {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #ffd700; // Golden text for wins
+      font-weight: 600;
+    }
+
+    .player-id {
+      font-size: 0.9rem;
+      color: #ccc; // Softer color for IDs
+    }
+
+    .play-button {
+      background: linear-gradient(90deg, #6a11cb, #2575fc); // Vibrant gradient button
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(90deg, #2575fc, #6a11cb);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Keyframes for scrolling effect
+@keyframes scroll-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -39,7 +39,7 @@ export const TopBar: React.FC = () => {
           <span>+1 123 456 7890</span>
         </div>
         <div className="top-navbar__left__item">
-          <div className="currency-selector"
+          <div className="currency-selector currency-language-text"
           onClick={() => setIsModalOpen(true)}
           >
             <span>{data.currency}</span> | <span>{data.language}</span>

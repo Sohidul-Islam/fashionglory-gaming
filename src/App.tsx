@@ -10,6 +10,8 @@ import { Hero } from "./components/Hero/Hero";
 import { FAQ } from "./components/FAQ/FAQ";
 import { Footer } from "./components/Footer/Footer";
 import { TopBar } from "./components/Navbar/Topbar";
+import { NoticeBoard } from "./components/Notice/NoticeBoard";
+import { NoticeBoardCard } from "./components/Notice/NoticeBoardCard";
 
 function App() {
   const crashGames = [
@@ -630,6 +632,30 @@ function App() {
     // Add more new games...
   ];
 
+  const notices = [
+    "Notice 1: Upcoming meeting on Monday at 10 AM.",
+    "Notice 2: Office will remain closed on Friday.",
+    "Notice 3: Submit your project report by tomorrow.",
+    "Notice 4: Annual Sports Day is scheduled for next month.",
+  ];
+
+
+  const players = [
+    { name: "John Doe", win: 1588, userId: "user123" },
+    { name: "Jane Smith", win: 2045, userId: "user456" },
+    { name: "Mike Johnson", win: 899, userId: "user789" },
+    { name: "Alice Brown", win: 1450, userId: "user321" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+    { name: "Chris Green", win: 1700, userId: "user654" },
+  ];
+
+
   return (
     <>
   <div className="navbar-container">
@@ -638,6 +664,8 @@ function App() {
   </div>
       <div className="app-container">
         <Hero />
+        <NoticeBoard notices={notices} />
+        <NoticeBoardCard players={players} />
         <GameSlider title="CRASH GAMES" games={crashGames} />
         <GameSlider title="POPULAR SLOTS" games={slotGames} />
         <GameSlider title="LIVE CASINO" games={liveGames} />

@@ -662,8 +662,10 @@ function App() {
       </div>
       <div className="app-container">
         <Hero />
-        <NoticeBoard notices={notices} />
-        <NoticeBoardCard players={players} />
+        <div className="notice-section">
+          <NoticeBoard notices={notices} />
+          <NoticeBoardCard players={players} />
+        </div>
         <GameSlider title="CRASH GAMES" games={crashGames} />
         <GameSlider title="POPULAR SLOTS" games={slotGames} />
         <GameSlider title="LIVE CASINO" games={liveGames} />

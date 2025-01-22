@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { FaBullhorn, FaPlay } from "react-icons/fa";
 import "./NoticeBoard.scss";
 
 interface NoticeBoardProps {
@@ -6,22 +7,29 @@ interface NoticeBoardProps {
 }
 
 export const NoticeBoard: React.FC<NoticeBoardProps> = ({ notices }) => {
-  const [currentNotices, setCurrentNotices] = useState<string[]>([]);
-  const marqueeRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Duplicate notices to create a seamless loop effect
-    setCurrentNotices([...notices, ...notices]);
-  }, [notices]);
-
   return (
     <div className="notice-board">
-      <div className="notice-board__marquee" ref={marqueeRef}>
-        {currentNotices.map((notice, index) => (
-          <div className="notice-board__item" key={index}>
-            {notice}
+      <div className="notice-header">
+        <FaBullhorn className="notice-icon" />
+        <h3>Announcements</h3>
+      </div>
+      <div className="notice-content">
+        <div className="marquee-container">
+          <div className="marquee">
+            {[...notices, ...notices].map((notice, index) => (
+              <div key={index} className="notice-item">
+                <div className="notice-info">
+                  <span className="notice-badge pulse">NEW</span>
+                  <p>{notice}</p>
+                </div>
+                <button className="play-button">
+                  <FaPlay className="play-icon" />
+                  <span>Play Now</span>
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

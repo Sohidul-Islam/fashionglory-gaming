@@ -3,7 +3,7 @@
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
-  background: rgba(26, 26, 26, 0.8);
+  background: #ff9f1c;
   cursor: pointer;
 
   &:hover {
@@ -150,7 +150,7 @@
 
   .game-card-content {
     padding: 12px;
-    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.8), #1a1a1a);
+    // background: linear-gradient(to bottom, rgba(26, 26, 26, 0.8), #1a1a1a);
 
     .game-title {
       font-size: 16px;
@@ -164,7 +164,7 @@
 
     .game-provider {
       font-size: 12px;
-      color: #999999;
+      color: #ffffff;
       margin: 4px 0 0;
     }
   }

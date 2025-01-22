@@ -8,7 +8,7 @@
   overflow: hidden;
   position: relative;
 
-  &__container{
+  &__container {
     display: flex;
     // flex-direction: r;
     gap: 1rem;
@@ -41,13 +41,17 @@
   }
 
   &__item {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 1.2rem;
     text-align: center;
-    min-width: 220px;
+    // min-width: 220px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -76,7 +80,11 @@
     }
 
     .play-button {
-      background: linear-gradient(90deg, #6a11cb, #2575fc); // Vibrant gradient button
+      background: linear-gradient(
+        90deg,
+        #6a11cb,
+        #2575fc
+      ); // Vibrant gradient button
       border: none;
       border-radius: 5px;
       color: #fff;
@@ -101,5 +109,176 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.winners-board {
+  max-width: 1440px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  .winners-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .trophy-icon {
+      color: #ff9f1c;
+      font-size: 24px;
+      animation: bounce 2s infinite;
+    }
+
+    h3 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .winners-content {
+    overflow: hidden;
+
+    .marquee-container {
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+      );
+    }
+
+    .marquee {
+      display: flex;
+      gap: 16px;
+      animation: scroll 30s linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+
+    .winner-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      // min-width: 300px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+        border-color: #ff9f1c;
+      }
+
+      .winner-rank {
+        background: #ff9f1c;
+        color: #ffffff;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .winner-info {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+
+        .winner-name {
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+
+        .winner-amount {
+          color: #ff9f1c;
+          font-weight: 600;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+      }
+
+      .play-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(45deg, #ff9f1c, #ff7e1c);
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          // transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 159, 28, 0.3);
+
+          .play-icon {
+            animation: spin 1s ease infinite;
+          }
+        }
+
+        .play-icon {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .winners-board {
+    margin: 10px;
   }
 }

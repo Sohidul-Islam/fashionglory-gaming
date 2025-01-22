@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { FaTrophy, FaPlay } from "react-icons/fa";
 import "./NoticeBoardCard.scss";
 
 // import { GameCard } from "../GameCard/GameCard";
@@ -19,7 +20,7 @@ import "./NoticeBoardCard.scss";
 //       "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
 //     provider: "Spribe",
 //   },
- 
+
 // ];
 
 interface Player {
@@ -28,38 +29,42 @@ interface Player {
   userId: string;
 }
 
-interface NoticeBoardProps {
-  players: Player[]; // Array of player details
+interface NoticeBoardCardProps {
+  players: Player[];
 }
 
-export const NoticeBoardCard: React.FC<NoticeBoardProps> = ({ players }) => {
-  const [currentPlayers, setCurrentPlayers] = useState<Player[]>([]);
-  const marqueeRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Duplicate players to create a seamless loop effect
-    setCurrentPlayers([...players, ...players]);
-  }, [players]);
-
+export const NoticeBoardCard: React.FC<NoticeBoardCardProps> = ({
+  players,
+}) => {
   return (
-  <div className="notice-board-card__container">
-    <div>
-        {/* {crashGames.map((game) => (
-                     <GameCard game={game} />
-         ))} */}
-    </div>
-      <div className="notice-board-card">
-      <div className="notice-board-card__marquee" ref={marqueeRef}>
-        {currentPlayers.map((player, index) => (
-          <div className="notice-board-card__item" key={index}>
-            <h3 className="player-name">{player.name}</h3>
-            <p className="player-win">Win: ${player.win}</p>
-            <p className="player-id">User ID: {player.userId}</p>
-            <button className="play-button">Play</button>
+    <div className="winners-board">
+      <div className="winners-header">
+        <FaTrophy className="trophy-icon" />
+        <h3>Recent Winners</h3>
+      </div>
+      <div className="winners-content">
+        <div className="marquee-container">
+          <div className="marquee">
+            {[...players, ...players].map((player, index) => (
+              <div key={player.userId + index} className="winner-item">
+                <div className="winner-rank">
+                  #{(index % players.length) + 1}
+                </div>
+                <div className="winner-info">
+                  <span className="winner-name">{player.name}</span>
+                  <span className="winner-amount">
+                    €{player.win.toLocaleString()}
+                  </span>
+                </div>
+                <button className="play-button">
+                  <FaPlay className="play-icon" />
+                  <span>Play</span>
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
-  </div>
   );
 };

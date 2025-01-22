@@ -1,0 +1,305 @@
+.deposit-page {
+  min-height: calc(100vh - 120px); // Adjust for header/footer
+  background: linear-gradient(
+    169.06deg,
+    #074ce3 0%,
+    #074ce3 23.13%,
+    #042a7d 73.67%
+  );
+  padding: 20px;
+  color: #ffffff;
+
+  .deposit-container {
+    max-width: 1440px;
+    margin: 80px auto 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    @media (max-width: 768px) {
+      margin-top: 60px;
+      padding: 16px;
+    }
+
+    .deposit-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      justify-content: space-between;
+
+      .back-button,
+      .history-button {
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        span {
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+        flex: 1;
+        text-align: center;
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .deposit-tabs {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 16px;
+
+      .tab-button {
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 8px 16px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &.active {
+          opacity: 1;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #ff9f1c;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .deposit-filters {
+      margin-bottom: 24px;
+
+      .search-box {
+        position: relative;
+        margin-bottom: 16px;
+
+        .search-icon {
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        input {
+          width: 100%;
+          padding: 12px 12px 12px 40px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 8px;
+          color: #ffffff;
+          font-size: 16px;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #ff9f1c;
+          }
+        }
+      }
+
+      .category-filters {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+
+        @media (max-width: 768px) {
+          flex-wrap: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .category-btn {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 8px 16px;
+          color: #ffffff;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+
+          &:hover,
+          &.active {
+            background: #ff9f1c;
+            border-color: #ff9f1c;
+          }
+        }
+      }
+    }
+
+    .country-selector {
+      margin-bottom: 24px;
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        opacity: 0.8;
+      }
+
+      select {
+        width: 100%;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        option {
+          background: #011135;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .payment-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+      }
+
+      .payment-method-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          transform: translateY(-2px);
+          border-color: #ff9f1c;
+        }
+
+        .method-icon {
+          width: 100%;
+          height: 60px;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .method-info {
+          text-align: center;
+          width: 100%;
+
+          h3 {
+            margin: 0 0 12px;
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          .method-limits {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+
+            p {
+              margin: 0;
+              font-size: 14px;
+              opacity: 0.8;
+            }
+          }
+
+          .deposit-btn {
+            width: 100%;
+            padding: 10px;
+            background: #ff9f1c;
+            border: none;
+            border-radius: 6px;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: #ff8c00;
+              transform: translateY(-1px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Custom scrollbar for category filters
+.category-filters::-webkit-scrollbar {
+  height: 4px;
+}
+
+.category-filters::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.category-filters::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}

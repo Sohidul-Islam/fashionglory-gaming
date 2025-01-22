@@ -13,6 +13,7 @@ import { MdEmail } from "react-icons/md";
 import { Logo } from "../Logo/Logo";
 import "./Navbar.scss";
 import { CurrencyModal } from "../Modal/CurrencyModal";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar: React.FC = () => {
   const [data, setCurrency] = useState({
@@ -44,6 +45,12 @@ export const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = !isMenuOpen ? "hidden" : "auto";
+  };
+
+  const navigate = useNavigate();
+
+  const handleDepositClick = () => {
+    navigate("/deposit");
   };
 
   return (
@@ -111,7 +118,9 @@ export const Navbar: React.FC = () => {
               </div>
 
               <div className="user-actions">
-                <button className="btn-deposit">DEPOSIT</button>
+                <button className="btn-deposit" onClick={handleDepositClick}>
+                  Deposit
+                </button>
                 <button className="btn-register">REGISTRATION</button>
                 <button className="btn-login">
                   <FaUser />
@@ -157,7 +166,9 @@ export const Navbar: React.FC = () => {
             </div>
 
             <div className="user-actions">
-              <button className="btn-deposit">DEPOSIT</button>
+              <button className="btn-deposit" onClick={handleDepositClick}>
+                Deposit
+              </button>
               <button className="btn-register">REGISTRATION</button>
               <button className="btn-login">
                 <FaUser />

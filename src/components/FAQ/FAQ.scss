@@ -1,6 +1,6 @@
 .faq-section {
   padding: 60px 0;
-  background: #0a1118;
+  background: #011135;
   color: #ffffff;
 
   .faq-container {
@@ -31,6 +31,7 @@
         overflow: hidden;
         cursor: pointer;
         transition: all 0.3s ease;
+        border: 1px solid #ff9f1c;
 
         &:hover {
           transform: translateY(-2px);

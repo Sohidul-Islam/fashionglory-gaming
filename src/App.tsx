@@ -644,14 +644,6 @@ function App() {
     { name: "Jane Smith", win: 2045, userId: "user456" },
     { name: "Mike Johnson", win: 899, userId: "user789" },
     { name: "Alice Brown", win: 1450, userId: "user321" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
-    { name: "Chris Green", win: 1700, userId: "user654" },
   ];
 
   return (

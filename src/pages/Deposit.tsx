@@ -21,7 +21,7 @@ export const Deposit: React.FC = () => {
     {
       id: "bkash",
       name: "bKash",
-      icon: "/src/assets/bkash-logo.png",
+      icon: "/src/assets/bkashlogo.png",
       minAmount: 500,
       maxAmount: 50000,
       category: "mobile",
@@ -29,7 +29,7 @@ export const Deposit: React.FC = () => {
     {
       id: "nagad",
       name: "Nagad",
-      icon: "/src/assets/nagad-logo.png",
+      icon: "/src/assets/nagadlogo.png",
       minAmount: 500,
       maxAmount: 50000,
       category: "mobile",
@@ -37,7 +37,7 @@ export const Deposit: React.FC = () => {
     {
       id: "rocket",
       name: "Rocket",
-      icon: "/src/assets/rocket-logo.png",
+      icon: "/src/assets/rocketlogo.png",
       minAmount: 500,
       maxAmount: 30000,
       category: "mobile",
@@ -45,7 +45,7 @@ export const Deposit: React.FC = () => {
     {
       id: "visa",
       name: "Visa Card",
-      icon: "/src/assets/visa-logo.png",
+      icon: "/src/assets/visalogo.png",
       minAmount: 1000,
       maxAmount: 100000,
       category: "card",
@@ -53,7 +53,7 @@ export const Deposit: React.FC = () => {
     {
       id: "mastercard",
       name: "Mastercard",
-      icon: "/src/assets/mastercard-logo.png",
+      icon: "/src/assets/mastercardlogo.png",
       minAmount: 1000,
       maxAmount: 100000,
       category: "card",

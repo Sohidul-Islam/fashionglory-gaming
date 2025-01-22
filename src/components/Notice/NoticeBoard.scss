@@ -1,6 +1,7 @@
 .notice-board {
-  max-width: 1440px;
-  margin: 20px auto;
+  width: 100%;
+  margin: 0;
+  flex: 1;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -25,16 +26,21 @@
     h3 {
       color: #ffffff;
       margin: 0;
-      font-size: 20px;
+      font-size: clamp(18px, 2vw, 24px);
       font-weight: 600;
     }
   }
 
   .notice-content {
     overflow: hidden;
+    width: 100%;
+    height: 80px;
 
     .marquee-container {
       overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: relative;
       mask-image: linear-gradient(
         to right,
         transparent 0%,
@@ -46,8 +52,12 @@
 
     .marquee {
       display: flex;
-      gap: 16px;
-      animation: scroll 40s linear infinite;
+      gap: clamp(8px, 1vw, 16px);
+      animation: scroll 60s linear infinite;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       &:hover {
         animation-play-state: paused;
       }
@@ -57,25 +67,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 12px;
+      gap: clamp(8px, 1vw, 16px);
+      padding: clamp(8px, 1.5vw, 12px);
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
       transition: all 0.3s ease;
-      // min-width: 400px;
+      width: 300px;
+      flex-shrink: 0;
       border: 1px solid rgba(255, 255, 255, 0.1);
 
       &:hover {
         background: rgba(255, 255, 255, 0.1);
-        // transform: translateY(-2px);
         border-color: #ff9f1c;
       }
 
       .notice-info {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: clamp(6px, 1vw, 12px);
         flex: 1;
+        min-width: 0;
       }
 
       .notice-badge {
@@ -83,9 +94,10 @@
         color: #ffffff;
         padding: 4px 8px;
         border-radius: 4px;
-        font-size: 12px;
+        font-size: clamp(10px, 1vw, 12px);
         font-weight: 600;
         white-space: nowrap;
+        flex-shrink: 0;
 
         &.pulse {
           animation: pulse 2s infinite;
@@ -95,27 +107,36 @@
       p {
         color: #ffffff;
         margin: 0;
-        font-size: 14px;
+        font-size: clamp(12px, 1.2vw, 14px);
         line-height: 1.5;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .play-button {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         background: linear-gradient(45deg, #ff9f1c, #ff7e1c);
         border: none;
-        padding: 8px 16px;
+        padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 16px);
         border-radius: 6px;
         color: white;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
         white-space: nowrap;
+        flex-shrink: 0;
+
+        span {
+          font-size: clamp(12px, 1vw, 14px);
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
 
         &:hover {
-          transform: translateY(-2px);
           box-shadow: 0 4px 12px rgba(255, 159, 28, 0.3);
 
           .play-icon {
@@ -124,7 +145,7 @@
         }
 
         .play-icon {
-          font-size: 14px;
+          font-size: clamp(12px, 1vw, 14px);
         }
       }
     }
@@ -133,10 +154,10 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translate(100%, -50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate(-100%, -50%);
   }
 }
 
@@ -176,12 +197,19 @@
 
 @media (max-width: 768px) {
   .notice-board {
-    margin: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+}
 
-    // .notice-content {
-    //   .notice-item {
-    //     min-width: 300px;
-    //   }
-    // }
+@media (max-width: 480px) {
+  .notice-board {
+    padding: 10px;
+
+    .notice-header {
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
   }
 }

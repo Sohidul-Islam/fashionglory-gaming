@@ -113,8 +113,9 @@
 }
 
 .winners-board {
-  max-width: 1440px;
-  margin: 20px auto;
+  width: 100%;
+  margin: 0;
+  flex: 1;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -132,23 +133,28 @@
 
     .trophy-icon {
       color: #ff9f1c;
-      font-size: 24px;
+      font-size: clamp(20px, 2vw, 24px);
       animation: bounce 2s infinite;
     }
 
     h3 {
       color: #ffffff;
       margin: 0;
-      font-size: 20px;
+      font-size: clamp(18px, 2vw, 24px);
       font-weight: 600;
     }
   }
 
   .winners-content {
     overflow: hidden;
+    width: 100%;
+    height: 80px; // Add fixed height for the content area
 
     .marquee-container {
       overflow: hidden;
+      width: 100%;
+      height: 100%; // Make it full height of parent
+      position: relative;
       mask-image: linear-gradient(
         to right,
         transparent 0%,
@@ -160,8 +166,12 @@
 
     .marquee {
       display: flex;
-      gap: 16px;
-      animation: scroll 30s linear infinite;
+      gap: clamp(8px, 1vw, 16px);
+      animation: scroll 60s linear infinite;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       &:hover {
         animation-play-state: paused;
       }
@@ -170,31 +180,32 @@
     .winner-item {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 12px;
+      gap: clamp(8px, 1vw, 12px);
+      padding: clamp(8px, 1.5vw, 12px);
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
       transition: all 0.3s ease;
-      // min-width: 300px;
+      width: 300px;
+      flex-shrink: 0;
       border: 1px solid rgba(255, 255, 255, 0.1);
 
       &:hover {
         background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-2px);
         border-color: #ff9f1c;
       }
 
       .winner-rank {
         background: #ff9f1c;
         color: #ffffff;
-        width: 32px;
-        height: 32px;
+        width: clamp(24px, 4vw, 32px);
+        height: clamp(24px, 4vw, 32px);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
         font-weight: 600;
-        font-size: 14px;
+        font-size: clamp(12px, 1vw, 14px);
+        flex-shrink: 0;
       }
 
       .winner-info {
@@ -202,38 +213,49 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 12px;
+        gap: clamp(6px, 1vw, 12px);
+        min-width: 0; // Prevents flex item from overflowing
 
         .winner-name {
           color: #ffffff;
           font-weight: 500;
-          font-size: 14px;
+          font-size: clamp(12px, 1.2vw, 14px);
           white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .winner-amount {
           color: #ff9f1c;
           font-weight: 600;
-          font-size: 14px;
+          font-size: clamp(12px, 1.2vw, 14px);
           white-space: nowrap;
+          flex-shrink: 0;
         }
       }
 
       .play-button {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         background: linear-gradient(45deg, #ff9f1c, #ff7e1c);
         border: none;
-        padding: 8px 16px;
+        padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 16px);
         border-radius: 6px;
         color: white;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
+        flex-shrink: 0;
+
+        span {
+          font-size: clamp(12px, 1vw, 14px);
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
 
         &:hover {
-          // transform: translateY(-2px);
           box-shadow: 0 4px 12px rgba(255, 159, 28, 0.3);
 
           .play-icon {
@@ -242,7 +264,7 @@
         }
 
         .play-icon {
-          font-size: 14px;
+          font-size: clamp(12px, 1vw, 14px);
         }
       }
     }
@@ -251,10 +273,10 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translate(100%, -50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate(-100%, -50%);
   }
 }
 
@@ -279,6 +301,19 @@
 
 @media (max-width: 768px) {
   .winners-board {
-    margin: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .winners-board {
+    padding: 10px;
+
+    .winners-header {
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
   }
 }

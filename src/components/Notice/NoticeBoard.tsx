@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBullhorn, FaPlay } from "react-icons/fa";
+import { FaBullhorn } from "react-icons/fa";
 import "./NoticeBoard.scss";
 
 interface NoticeBoardProps {
@@ -22,10 +22,6 @@ export const NoticeBoard: React.FC<NoticeBoardProps> = ({ notices }) => {
                   <span className="notice-badge pulse">NEW</span>
                   <p>{notice}</p>
                 </div>
-                <button className="play-button">
-                  <FaPlay className="play-icon" />
-                  <span>Play Now</span>
-                </button>
               </div>
             ))}
           </div>

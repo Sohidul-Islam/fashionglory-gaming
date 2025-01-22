@@ -15,30 +15,29 @@ import "./Navbar.scss";
 import { CurrencyModal } from "../Modal/CurrencyModal";
 
 export const Navbar: React.FC = () => {
+  const [data, setCurrency] = useState({
+    currency: "USD",
+    language: "en",
+  });
 
-   const [data, setCurrency] = useState({
-      currency: "USD",
-      language: "en",
-    });
-  
-    const [currentTime, setCurrentTime] = useState(new Date());
-  
-  
-    const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  
-    const handleCurrencySelect = (value: { currency: string; language: string }) => {
-      setCurrency(value);
-    };
-  
-      // Update the current time every second
-      useEffect(() => {
-        const timer = setInterval(() => setCurrentTime(new Date()), 1000);
-        return () => clearInterval(timer); // Clean up on unmount
-      }, []);
-    
-      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCurrencySelect = (value: {
+    currency: string;
+    language: string;
+  }) => {
+    setCurrency(value);
+  };
+
+  // Update the current time every second
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(timer); // Clean up on unmount
+  }, []);
+
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -61,19 +60,19 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="top-navbar__left mobile-only">
-             
-                  <div className="top-navbar__left__item">
-                    <div className="currency-selector currency-language-text"
-                    onClick={() => setIsModalOpen(true)}
-                    >
-                      <span>{data.currency}</span> | <span>{data.language}</span>
-                    </div>
-                  </div>
-                  <div className="top-navbar__left__item">
-                    <span>{timeZone}</span>
-                    <span>{currentTime.toLocaleTimeString()}</span>
-                  </div>
-                </div>
+            <div className="top-navbar__left__item">
+              <div
+                className="currency-selector currency-language-text"
+                onClick={() => setIsModalOpen(true)}
+              >
+                <span>{data.currency}</span> | <span>{data.language}</span>
+              </div>
+            </div>
+            <div className="top-navbar__left__item">
+              <span>{timeZone}</span>
+              <span>{currentTime.toLocaleTimeString()}</span>
+            </div>
+          </div>
 
           <div className={`main-menu-wrapper ${isMenuOpen ? "active" : ""}`}>
             <div className="main-menu">
@@ -91,7 +90,7 @@ export const Navbar: React.FC = () => {
                 LIVE CASINO
               </a>
               <a href="#" className="menu-item">
-                1xGAMES
+                GLORYBET GAMES
               </a>
               <a href="#" className="menu-item">
                 TV GAMES
@@ -108,9 +107,7 @@ export const Navbar: React.FC = () => {
                   <FaTrophy />
                   <span>1,234 CP</span>
                 </div>
-                <div>
-                
-            </div>
+                <div></div>
               </div>
 
               <div className="user-actions">
@@ -123,10 +120,10 @@ export const Navbar: React.FC = () => {
               </div>
               {/* contact information */}
               <div className="top-navbar__right mobile-only">
-              <div className="top-navbar__right__item">
-                    <FaUser />
-                    <span>+1 123 456 7890</span>
-                  </div>
+                <div className="top-navbar__right__item">
+                  <FaUser />
+                  <span>+1 123 456 7890</span>
+                </div>
                 <div className="top-navbar__right__item">
                   <BiSupport />
                   <span>24/7 Support</span>
@@ -167,18 +164,16 @@ export const Navbar: React.FC = () => {
                 LOG IN
               </button>
             </div>
-
-            
           </div>
         </div>
       </nav>
 
-           <CurrencyModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-              onChange={handleCurrencySelect}
-              value={data}
-            />
+      <CurrencyModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onChange={handleCurrencySelect}
+        value={data}
+      />
     </div>
   );
 };

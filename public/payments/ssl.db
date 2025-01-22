@@ -1,0 +1,93 @@
+--- 
+files: 
+  certificate: 
+    movieshortsit_com_ac95c_82633_1766498966_c3e76d0d7d9cf6dc06b30bc79586e106: 
+      created: '1734962966'
+      domains: 
+        - movieshortsit.com
+        - mail.movieshortsit.com
+        - www.movieshortsit.com
+        - cpanel.movieshortsit.com
+        - webmail.movieshortsit.com
+        - webdisk.movieshortsit.com
+        - cpcontacts.movieshortsit.com
+        - cpcalendars.movieshortsit.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Cert for “movieshortsit.com”
+      id: movieshortsit_com_ac95c_82633_1766498966_c3e76d0d7d9cf6dc06b30bc79586e106
+      is_self_signed: 1
+      issuer.commonName: movieshortsit.com
+      issuer.organizationName: ~
+      key_algorithm: rsaEncryption
+      modulus: ac95c553bad57a1cef9b560b19f2c7d4411e28b9a184560473d38a7dbd9232f407d70884a7ed7c4d8d876c91b559ca92bc9887c9caf975d3d2e22abd807e764f03235526e9a7c0cee12f06ce57ac6edbc02b216d5e03cd0f5c62ae03f66ab14e8b6d3278310602c458fb26743e453487503579abf1dd6569abd3352805e717c989b84dbe1f9ca613dd6ca850a2d58e34b5e3457eb13d08d037644c4457de877a23ca213ccda6ae9d90b4f55a8dd545e58564d970615d881fb6d0ae023240bd78b2079c5c3895d99e6ce6e4a187f5c324458aeb93a2bbe3ea96c01124236f9a47aa5eb0492a9780f653a9bd22da4d45fcf36a8ae5a247ab14adab5c328eb82633
+      modulus_length: 2048
+      not_after: '1766498966'
+      not_before: '1734962966'
+      serial: 7a9582d9
+      signature_algorithm: sha256WithRSAEncryption
+      subject.commonName: movieshortsit.com
+      validation_type: ~
+    movieshortsit_com_e38fe_f71c9_1742739836_d85e2c092b948d3dde8d77f6a99ccca1: 
+      created: '1734967348'
+      domains: 
+        - "*.movieshortsit.com"
+        - movieshortsit.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Cert for “movieshortsit.com” 1734967348.0
+      id: movieshortsit_com_e38fe_f71c9_1742739836_d85e2c092b948d3dde8d77f6a99ccca1
+      is_self_signed: 0
+      issuer.commonName: R10
+      issuer.organizationName: Let's Encrypt
+      key_algorithm: rsaEncryption
+      modulus: e38fe8337da626607a432df1156c8db56fac27c8cca7a2bddf5ab183b15defbc2d21097af0aaaaf4f7974ccb2375923660491bb6a544091ae5ebd3380489ccb318c4e1cedd6b40dae1a10b1fbac7dd612852b27ea60c6dc673f87758d3c6e67f890d8c303e7884516232fa7380e93bba995d5fd3b958bf20450d7afaeef333ba2ac87130ab4eb1c4d68f2b90e42b46992fbe4398fec8839da812a7bc21126e3b74995a6cc11aa9431d2160b96bb753efd54bdd13c6444f9777ea63b6a25fd698af9d1623ced69494b49bfae9879aaa112893a4e9e2ace7fea37f11d5ad8851a45348ccb178760f7c30b432040f68e8985ececa2eebd81871bff18c0dfaef71c9
+      modulus_length: 2048
+      not_after: '1742739836'
+      not_before: '1734963837'
+      serial: 044692a1a3cf63539c120b1185e1f8975275
+      signature_algorithm: sha256WithRSAEncryption
+      subject.commonName: movieshortsit.com
+      validation_type: dv
+  key: 
+    ac95c_82633_20500b4aeb84a98436be108281d10156: 
+      created: '1734962966'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Key for “movieshortsit.com”
+      id: ac95c_82633_20500b4aeb84a98436be108281d10156
+      key_algorithm: rsaEncryption
+      modulus: ac95c553bad57a1cef9b560b19f2c7d4411e28b9a184560473d38a7dbd9232f407d70884a7ed7c4d8d876c91b559ca92bc9887c9caf975d3d2e22abd807e764f03235526e9a7c0cee12f06ce57ac6edbc02b216d5e03cd0f5c62ae03f66ab14e8b6d3278310602c458fb26743e453487503579abf1dd6569abd3352805e717c989b84dbe1f9ca613dd6ca850a2d58e34b5e3457eb13d08d037644c4457de877a23ca213ccda6ae9d90b4f55a8dd545e58564d970615d881fb6d0ae023240bd78b2079c5c3895d99e6ce6e4a187f5c324458aeb93a2bbe3ea96c01124236f9a47aa5eb0492a9780f653a9bd22da4d45fcf36a8ae5a247ab14adab5c328eb82633
+      modulus_length: 2048
+    e38fe_f71c9_2ce87d73b3c6bd9191acff4043f80602: 
+      created: '1734967348'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Key for “movieshortsit.com” 1734967348.0
+      id: e38fe_f71c9_2ce87d73b3c6bd9191acff4043f80602
+      key_algorithm: rsaEncryption
+      modulus: e38fe8337da626607a432df1156c8db56fac27c8cca7a2bddf5ab183b15defbc2d21097af0aaaaf4f7974ccb2375923660491bb6a544091ae5ebd3380489ccb318c4e1cedd6b40dae1a10b1fbac7dd612852b27ea60c6dc673f87758d3c6e67f890d8c303e7884516232fa7380e93bba995d5fd3b958bf20450d7afaeef333ba2ac87130ab4eb1c4d68f2b90e42b46992fbe4398fec8839da812a7bc21126e3b74995a6cc11aa9431d2160b96bb753efd54bdd13c6444f9777ea63b6a25fd698af9d1623ced69494b49bfae9879aaa112893a4e9e2ace7fea37f11d5ad8851a45348ccb178760f7c30b432040f68e8985ececa2eebd81871bff18c0dfaef71c9
+      modulus_length: 2048
+indexes: 
+  certificate: 
+    modulus: 
+      ac95c553bad57a1cef9b560b19f2c7d4411e28b9a184560473d38a7dbd9232f407d70884a7ed7c4d8d876c91b559ca92bc9887c9caf975d3d2e22abd807e764f03235526e9a7c0cee12f06ce57ac6edbc02b216d5e03cd0f5c62ae03f66ab14e8b6d3278310602c458fb26743e453487503579abf1dd6569abd3352805e717c989b84dbe1f9ca613dd6ca850a2d58e34b5e3457eb13d08d037644c4457de877a23ca213ccda6ae9d90b4f55a8dd545e58564d970615d881fb6d0ae023240bd78b2079c5c3895d99e6ce6e4a187f5c324458aeb93a2bbe3ea96c01124236f9a47aa5eb0492a9780f653a9bd22da4d45fcf36a8ae5a247ab14adab5c328eb82633: 
+        movieshortsit_com_ac95c_82633_1766498966_c3e76d0d7d9cf6dc06b30bc79586e106: ~
+      e38fe8337da626607a432df1156c8db56fac27c8cca7a2bddf5ab183b15defbc2d21097af0aaaaf4f7974ccb2375923660491bb6a544091ae5ebd3380489ccb318c4e1cedd6b40dae1a10b1fbac7dd612852b27ea60c6dc673f87758d3c6e67f890d8c303e7884516232fa7380e93bba995d5fd3b958bf20450d7afaeef333ba2ac87130ab4eb1c4d68f2b90e42b46992fbe4398fec8839da812a7bc21126e3b74995a6cc11aa9431d2160b96bb753efd54bdd13c6444f9777ea63b6a25fd698af9d1623ced69494b49bfae9879aaa112893a4e9e2ace7fea37f11d5ad8851a45348ccb178760f7c30b432040f68e8985ececa2eebd81871bff18c0dfaef71c9: 
+        movieshortsit_com_e38fe_f71c9_1742739836_d85e2c092b948d3dde8d77f6a99ccca1: ~
+    subject.commonName: 
+      movieshortsit.com: 
+        movieshortsit_com_ac95c_82633_1766498966_c3e76d0d7d9cf6dc06b30bc79586e106: ~
+        movieshortsit_com_e38fe_f71c9_1742739836_d85e2c092b948d3dde8d77f6a99ccca1: ~
+uniques: 
+  certificate: 
+    friendly_name: 
+      Cert for “movieshortsit.com”: movieshortsit_com_ac95c_82633_1766498966_c3e76d0d7d9cf6dc06b30bc79586e106
+      Cert for “movieshortsit.com” 1734967348.0: movieshortsit_com_e38fe_f71c9_1742739836_d85e2c092b948d3dde8d77f6a99ccca1
+  key: 
+    friendly_name: 
+      Key for “movieshortsit.com”: ac95c_82633_20500b4aeb84a98436be108281d10156
+      Key for “movieshortsit.com” 1734967348.0: e38fe_f71c9_2ce87d73b3c6bd9191acff4043f80602
+    modulus:ecdsa_curve_name:ecdsa_public: 
+      ac95c553bad57a1cef9b560b19f2c7d4411e28b9a184560473d38a7dbd9232f407d70884a7ed7c4d8d876c91b559ca92bc9887c9caf975d3d2e22abd807e764f03235526e9a7c0cee12f06ce57ac6edbc02b216d5e03cd0f5c62ae03f66ab14e8b6d3278310602c458fb26743e453487503579abf1dd6569abd3352805e717c989b84dbe1f9ca613dd6ca850a2d58e34b5e3457eb13d08d037644c4457de877a23ca213ccda6ae9d90b4f55a8dd545e58564d970615d881fb6d0ae023240bd78b2079c5c3895d99e6ce6e4a187f5c324458aeb93a2bbe3ea96c01124236f9a47aa5eb0492a9780f653a9bd22da4d45fcf36a8ae5a247ab14adab5c328eb82633: ac95c_82633_20500b4aeb84a98436be108281d10156
+      e38fe8337da626607a432df1156c8db56fac27c8cca7a2bddf5ab183b15defbc2d21097af0aaaaf4f7974ccb2375923660491bb6a544091ae5ebd3380489ccb318c4e1cedd6b40dae1a10b1fbac7dd612852b27ea60c6dc673f87758d3c6e67f890d8c303e7884516232fa7380e93bba995d5fd3b958bf20450d7afaeef333ba2ac87130ab4eb1c4d68f2b90e42b46992fbe4398fec8839da812a7bc21126e3b74995a6cc11aa9431d2160b96bb753efd54bdd13c6444f9777ea63b6a25fd698af9d1623ced69494b49bfae9879aaa112893a4e9e2ace7fea37f11d5ad8851a45348ccb178760f7c30b432040f68e8985ececa2eebd81871bff18c0dfaef71c9: e38fe_f71c9_2ce87d73b3c6bd9191acff4043f80602

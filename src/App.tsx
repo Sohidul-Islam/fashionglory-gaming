@@ -639,7 +639,6 @@ function App() {
     "Notice 4: Annual Sports Day is scheduled for next month.",
   ];
 
-
   const players = [
     { name: "John Doe", win: 1588, userId: "user123" },
     { name: "Jane Smith", win: 2045, userId: "user456" },
@@ -655,13 +654,12 @@ function App() {
     { name: "Chris Green", win: 1700, userId: "user654" },
   ];
 
-
   return (
     <>
-  <div className="navbar-container">
-  <TopBar />
-  <Navbar />
-  </div>
+      <div className="navbar-container">
+        <TopBar />
+        <Navbar />
+      </div>
       <div className="app-container">
         <Hero />
         <NoticeBoard notices={notices} />

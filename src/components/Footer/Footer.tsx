@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
             <h4>About Us</h4>
             <ul>
               <li>
-                <a href="#">About 1xCasino</a>
+                <a href="#">About GloryBet</a>
               </li>
               <li>
                 <a href="#">Responsible Gaming</a>

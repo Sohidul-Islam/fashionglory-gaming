@@ -13,7 +13,7 @@ import { MdEmail } from "react-icons/md";
 import { Logo } from "../Logo/Logo";
 import "./Navbar.scss";
 import { CurrencyModal } from "../Modal/CurrencyModal";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Navbar: React.FC = () => {
   const [data, setCurrency] = useState({
@@ -58,9 +58,11 @@ export const Navbar: React.FC = () => {
       <nav className="main-navbar">
         <div className="navbar-container">
           <div className="navbar-left">
-            <div className="brand">
-              <Logo />
-            </div>
+            <NavLink to="/">
+              <div className="brand">
+                <Logo />
+              </div>
+            </NavLink>
             <button className="mobile-menu-button" onClick={toggleMenu}>
               {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>

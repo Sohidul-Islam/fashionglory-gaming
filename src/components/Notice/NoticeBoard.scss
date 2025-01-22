@@ -53,7 +53,7 @@
     .marquee {
       display: flex;
       gap: clamp(8px, 1vw, 16px);
-      animation: scroll 60s linear infinite;
+      animation: scroll 30s linear infinite;
       position: absolute;
       left: 0;
       top: 50%;
@@ -154,7 +154,7 @@
 
 @keyframes scroll {
   0% {
-    transform: translate(100%, -50%);
+    transform: translate(0, -50%);
   }
   100% {
     transform: translate(-100%, -50%);

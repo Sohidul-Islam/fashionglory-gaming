@@ -85,25 +85,33 @@ export const Navbar: React.FC = () => {
 
           <div className={`main-menu-wrapper ${isMenuOpen ? "active" : ""}`}>
             <div className="main-menu">
-              <a href="#" className="menu-item active">
-                LOBBY
-              </a>
-              <div className="menu-item has-submenu">
-                PROMO
-                <div className="mega-menu">{/* Mega menu content */}</div>
-              </div>
-              <a href="#" className="menu-item">
-                SLOTS
-              </a>
-              <a href="#" className="menu-item">
-                LIVE CASINO
-              </a>
-              <a href="#" className="menu-item">
-                GLORYBET GAMES
-              </a>
-              <a href="#" className="menu-item">
-                TV GAMES
-              </a>
+              <NavLink to="/sports" className="menu-item sports">
+                Sports
+              </NavLink>
+              <NavLink to="/crash" className="menu-item crash">
+                Crash
+              </NavLink>
+              <NavLink to="/slots" className="menu-item slots">
+                Slots
+              </NavLink>
+              <NavLink to="/arcade" className="menu-item arcade">
+                Arcade
+              </NavLink>
+              <NavLink to="/casino" className="menu-item casino">
+                Casino
+              </NavLink>
+              <NavLink to="/lottery" className="menu-item lottery">
+                Lottery
+              </NavLink>
+              <NavLink to="/fishing" className="menu-item fishing">
+                Fishing
+              </NavLink>
+              <NavLink to="/promotion" className="menu-item promotion">
+                Promotion
+              </NavLink>
+              <NavLink to="/table" className="menu-item table">
+                Table
+              </NavLink>
             </div>
 
             <div className="mobile-actions">

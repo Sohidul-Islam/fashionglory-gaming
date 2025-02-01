@@ -91,7 +91,7 @@
 
     .main-menu {
       display: flex;
-      gap: 24px;
+      gap: 10px;
 
       @media (max-width: 1024px) {
         flex-direction: column;
@@ -100,24 +100,51 @@
       }
 
       .menu-item {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 600;
-        padding: 8px 12px;
+        padding: 8px 16px;
         border-radius: 4px;
-        transition: all 0.2s;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s;
 
-        @media (max-width: 1024px) {
-          font-size: 16px;
-          padding: 12px;
-          text-align: center;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+        &:hover {
+          opacity: 0.9;
         }
 
-        &:hover,
-        &.active {
-          background: rgba(255, 255, 255, 0.1);
+        &.sports {
+          background-color: #FF9F1C;
+        }
+
+        &.crash {
+          background-color: #074CE3;
+        }
+
+        &.slots {
+          background-color: #FF3300;
+        }
+
+        &.arcade {
+          background-color: #5E00FF;
+        }
+
+        &.casino {
+          background-color: #1ABC9C;
+        }
+
+        &.lottery {
+          background-color: #00ABEA;
+        }
+
+        &.fishing {
+          background-color: #47BA00;
+        }
+
+        &.promotion {
+          background-color: #8F4AFF;
+        }
+
+        &.table {
+          background-color: #FF07DE;
         }
       }
     }

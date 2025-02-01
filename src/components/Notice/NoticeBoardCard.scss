@@ -112,38 +112,29 @@
   }
 }
 
+.winner-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-size: 1rem;
+  background: #FF4D4D;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .winners-board {
-  width: 100%;
+  // width: 100%;
   margin: 0;
   flex: 1;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  // padding: 20px;
+  // background: rgba(255, 255, 255, 0.1);
+  // backdrop-filter: blur(10px);
+  // border-radius: 16px;
+  // box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  // border: 1px solid rgba(255, 255, 255, 0.1);
 
-  .winners-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    .trophy-icon {
-      color: #ff9f1c;
-      font-size: clamp(20px, 2vw, 24px);
-      animation: bounce 2s infinite;
-    }
-
-    h3 {
-      color: #ffffff;
-      margin: 0;
-      font-size: clamp(18px, 2vw, 24px);
-      font-weight: 600;
-    }
-  }
 
   .winners-content {
     overflow: hidden;
@@ -155,6 +146,7 @@
       width: 100%;
       height: 100%; // Make it full height of parent
       position: relative;
+      max-width: 1250px;
       mask-image: linear-gradient(
         to right,
         transparent 0%,
@@ -182,17 +174,14 @@
       align-items: center;
       gap: clamp(8px, 1vw, 12px);
       padding: clamp(8px, 1.5vw, 12px);
-      background: rgba(255, 255, 255, 0.05);
+      background: #FF4D4D4D;
       border-radius: 8px;
       transition: all 0.3s ease;
       width: 300px;
       flex-shrink: 0;
       border: 1px solid rgba(255, 255, 255, 0.1);
 
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: #ff9f1c;
-      }
+   
 
       .winner-rank {
         background: #ff9f1c;

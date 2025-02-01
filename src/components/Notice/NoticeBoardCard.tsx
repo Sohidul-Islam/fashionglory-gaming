@@ -38,11 +38,11 @@ export const NoticeBoardCard: React.FC<NoticeBoardCardProps> = ({
 }) => {
   return (
     <div className="winners-board">
-      <div className="winners-header">
-        <FaTrophy className="trophy-icon" />
-        <h3>Recent Winners</h3>
+      <div className="winners-content" style={{display:"flex",alignItems:"center",justifyContent:"center", padding:"10px"}}>
+      <div className="winner-label" style={{display:"flex",alignItems:"center",justifyContent:"center", gap:"10px"}}>
+      <FaTrophy className="trophy-icon" style={{color:"white", fontSize:"20px"}} />
+      <p style={{color:"white", fontSize:"1rem"}}>Recent Winners</p>
       </div>
-      <div className="winners-content">
         <div className="marquee-container">
           <div className="marquee">
             {[...players, ...players].map((player, index) => (
@@ -53,7 +53,7 @@ export const NoticeBoardCard: React.FC<NoticeBoardCardProps> = ({
                 <div className="winner-info">
                   <span className="winner-name">{player.name}</span>
                   <span className="winner-amount">
-                    €{player.win.toLocaleString()}
+                  ৳{player.win.toLocaleString()}
                   </span>
                 </div>
                 <button className="play-button">

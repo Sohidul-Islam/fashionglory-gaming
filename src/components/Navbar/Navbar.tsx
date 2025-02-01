@@ -14,6 +14,9 @@ import { Logo } from "../Logo/Logo";
 import "./Navbar.scss";
 import { CurrencyModal } from "../Modal/CurrencyModal";
 import { NavLink, useNavigate } from "react-router-dom";
+import { WalletIcon } from "../Icon/WalletIcon";
+import { EyeHideIcon } from "../Icon/EyeHideIcon";
+import { EyeShowIcon } from "../Icon/EyeShowIcon";
 
 export const Navbar: React.FC = () => {
   const [data, setCurrency] = useState({
@@ -41,6 +44,8 @@ export const Navbar: React.FC = () => {
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [showBalance, setShowBalance] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -166,12 +171,18 @@ export const Navbar: React.FC = () => {
           <div className="navbar-right desktop-only">
             <div className="user-balance">
               <div className="balance-item">
-                <FaWallet />
-                <span>€1,234.56</span>
-              </div>
-              <div className="balance-item">
-                <FaTrophy />
-                <span>1,234 CP</span>
+                <WalletIcon />
+                {showBalance ? (
+                  <span>৳1000</span>
+                ) : (
+                  null
+                )}
+
+                <span onClick={() => setShowBalance(!showBalance)} style={{
+                  color: "white !important"
+                }}>
+                {showBalance ? <EyeHideIcon /> : <EyeShowIcon />}
+                </span>
               </div>
             </div>
 
@@ -179,7 +190,7 @@ export const Navbar: React.FC = () => {
               <button className="btn-deposit" onClick={handleDepositClick}>
                 Deposit
               </button>
-              <button className="btn-register">REGISTRATION</button>
+              <button className="btn-register">Sign Up</button>
               <button className="btn-login">
                 <FaUser />
                 LOG IN

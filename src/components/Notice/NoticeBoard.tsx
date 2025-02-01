@@ -3,24 +3,29 @@ import { FaBullhorn } from "react-icons/fa";
 import "./NoticeBoard.scss";
 
 interface NoticeBoardProps {
-  notices: string[]; // Array of notices
+  notices: {
+    badge?: string;
+    notice: string;
+  }[]; // Array of notices
 }
 
 export const NoticeBoard: React.FC<NoticeBoardProps> = ({ notices }) => {
   return (
     <div className="notice-board">
-      <div className="notice-header">
-        <FaBullhorn className="notice-icon" />
-        <h3>Announcements</h3>
-      </div>
+     
       <div className="notice-content">
+      <FaBullhorn className="notice-icon" style={{color:"#2EF5FF"}} />
         <div className="marquee-container">
           <div className="marquee">
             {[...notices, ...notices].map((notice, index) => (
               <div key={index} className="notice-item">
                 <div className="notice-info">
-                  <span className="notice-badge pulse">NEW</span>
-                  <p>{notice}</p>
+                  {notice.badge ? (
+                    <span className="notice-badge pulse">{notice.badge}</span>
+                  ) : (
+                    <span className="notice-dot"></span>
+                  )}
+                  <p>{notice.notice}</p>
                 </div>
               </div>
             ))}

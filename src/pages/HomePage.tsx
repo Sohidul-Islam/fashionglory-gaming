@@ -626,10 +626,20 @@ const HomePage: React.FC = () => {
   ];
 
   const notices = [
-    "Notice 1: Upcoming meeting on Monday at 10 AM.",
-    "Notice 2: Office will remain closed on Friday.",
-    "Notice 3: Submit your project report by tomorrow.",
-    "Notice 4: Annual Sports Day is scheduled for next month.",
+    {
+      badge: "NEW",
+      notice: "Upcoming meeting on Monday at 10 AM.",
+    },
+    {
+      badge: "HOT",
+      notice: "Office will remain closed on Friday.",
+    },
+    {
+      notice: "Submit your project report by tomorrow.",
+    },
+    {      
+      notice: "Annual Sports Day is scheduled for next month.",
+    },
   ];
 
   const players = [
@@ -645,8 +655,8 @@ const HomePage: React.FC = () => {
         <Hero />
         <div className="notice-section">
           <NoticeBoard notices={notices} />
-          <NoticeBoardCard players={players} />
         </div>
+        <NoticeBoardCard players={players} />
         <GameSlider title="CRASH GAMES" games={crashGames} />
         <GameSlider title="POPULAR SLOTS" games={slotGames} />
         <GameSlider title="LIVE CASINO" games={liveGames} />

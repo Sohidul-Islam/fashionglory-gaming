@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "./Hero.scss";
 import banner1 from "../../assets/Banner/1.jpg";
-// import banner2 from "../../assets/Banner/2.jpg";
-// import banner3 from "../../assets/Banner/3.jpg";
-// import banner4 from "../../assets/Banner/4.jpg";
+import banner2 from "../../assets/Banner/2.jpg";
+import banner3 from "../../assets/Banner/3.jpg";
+import banner4 from "../../assets/Banner/4.jpg";
 
 const heroSlides = [
   {
@@ -18,19 +18,19 @@ const heroSlides = [
     id: 2,
     title: "MEGA TOURNAMENT",
     subtitle: "Win up to €100,000 Daily",
-    imageUrl: banner1,
+    imageUrl: banner2,
   },
   {
     id: 3,
     title: "LIVE CASINO BONUS",
     subtitle: "200% Welcome Bonus",
-    imageUrl: banner1,
+    imageUrl: banner3,
   },
   {
     id: 4,
     title: "SLOTS PARADISE",
     subtitle: "1000+ Games Available",
-    imageUrl: banner1,
+    imageUrl: banner4,
   },
 ];
 

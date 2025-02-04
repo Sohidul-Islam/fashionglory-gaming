@@ -2,35 +2,35 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "./Hero.scss";
+import banner1 from "../../assets/Banner/1.jpg";
+// import banner2 from "../../assets/Banner/2.jpg";
+// import banner3 from "../../assets/Banner/3.jpg";
+// import banner4 from "../../assets/Banner/4.jpg";
 
 const heroSlides = [
   {
     id: 1,
     title: "SPIN OF THRONES III",
     subtitle: "€250,000 + 60,555 FS",
-    imageUrl:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=2000&q=80",
+    imageUrl: banner1,
   },
   {
     id: 2,
     title: "MEGA TOURNAMENT",
     subtitle: "Win up to €100,000 Daily",
-    imageUrl:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=2000&q=80",
+    imageUrl: banner1,
   },
   {
     id: 3,
     title: "LIVE CASINO BONUS",
     subtitle: "200% Welcome Bonus",
-    imageUrl:
-      "https://images.unsplash.com/photo-1636487658547-c05ee4cdc1ac?auto=format&fit=crop&w=2000&q=80",
+    imageUrl: banner1,
   },
   {
     id: 4,
     title: "SLOTS PARADISE",
     subtitle: "1000+ Games Available",
-    imageUrl:
-      "https://images.unsplash.com/photo-1592155931584-901ac15763e3?auto=format&fit=crop&w=2000&q=80",
+    imageUrl: banner1,
   },
 ];
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from "react";
 import {
   FaUser,
@@ -25,7 +24,7 @@ export const Navbar: React.FC = () => {
     language: "en",
   });
 
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [, setCurrentTime] = useState(new Date());
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -41,8 +40,6 @@ export const Navbar: React.FC = () => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timer); // Clean up on unmount
   }, []);
-
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

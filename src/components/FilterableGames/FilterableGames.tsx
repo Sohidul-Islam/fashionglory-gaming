@@ -1,13 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import { GameCard } from "../GameCard/GameCard";
 import { cn } from "../../lib/utils";
 import "./FilterableGames.scss";
 import cricket from "../../assets/MenuIcon/cricketball.png";
 import crash from "../../assets/MenuIcon/casino.png";
 import casino from "../../assets/MenuIcon/casino.png";
 import slot from "../../assets/MenuIcon/slots.png";
-import PlayButton from "../PlayButton";
 
 interface Game {
   id: string;
@@ -25,7 +22,6 @@ interface FilterableGamesProps {
 
 export const FilterableGames: React.FC<FilterableGamesProps> = ({ games }) => {
   const [selectedCategory, setSelectedCategory] = useState("sports");
-  const [searchQuery, setSearchQuery] = useState("");
 
   const categories = [
     { id: "sports", label: "Sports", icon: cricket, className: "bg-sports" },
@@ -45,11 +41,8 @@ export const FilterableGames: React.FC<FilterableGamesProps> = ({ games }) => {
   ];
 
   const filteredGames = games.filter((game) => {
-    const matchesSearch = game.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
     const matchesCategory = game.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    return matchesCategory;
   });
 
   return (

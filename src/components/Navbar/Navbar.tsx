@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from "react";
 import {
   FaUser,
@@ -63,7 +64,7 @@ export const Navbar: React.FC = () => {
       <nav className="main-navbar">
         <div className="navbar-container">
           <div className="navbar-left ">
-            <NavLink to="/">
+            <NavLink to="/" className={"hidden md:block"}>
               <div className="brand">
                 <Logo />
               </div>
@@ -74,18 +75,9 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="top-navbar__left mobile-only">
-            <div className="top-navbar__left__item">
-              <div
-                className="currency-selector currency-language-text"
-                onClick={() => setIsModalOpen(true)}
-              >
-                <span>{data.currency}</span> | <span>{data.language}</span>
-              </div>
-            </div>
-            <div className="top-navbar__left__item">
-              <span>{timeZone}</span>
-              <span>{currentTime.toLocaleTimeString()}</span>
-            </div>
+            <NavLink to="/">
+              <Logo />
+            </NavLink>
           </div>
 
           <div className={`main-menu-wrapper ${isMenuOpen ? "active" : ""}`}>

@@ -56,19 +56,19 @@ export const NoticeBoardCard: React.FC<NoticeBoardCardProps> = ({
             gap: "10px",
           }}
         >
-          <FaTrophy
-            className="trophy-icon"
-            style={{ color: "white", fontSize: "20px" }}
-          />
-          <p className="md:hidden" style={{ color: "white", fontSize: "1rem" }}>
+          <FaTrophy className="text-white text-[30px] md:text-[20px]" />
+          <p
+            className="hidden md:block"
+            style={{ color: "white", fontSize: "1rem" }}
+          >
             Recent Winners
           </p>
         </div>
         <div className="marquee-container">
-          <div className="marquee">
+          <div className="marquee h-[100px] md-h-[60px]">
             {[...players, ...players].map((player, index) => (
               <div key={player.userId + index} className="winner-item">
-                <div className="winner-rank">
+                <div className="winner-rank !hidden md:!flex">
                   #{(index % players.length) + 1}
                 </div>
                 <div className="winner-info">

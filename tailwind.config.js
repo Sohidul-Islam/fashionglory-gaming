@@ -16,7 +16,23 @@ module.exports = {
         fishing: '#47BA00',
         promotion: '#8F4AFF',
         table: '#FF07DE',
-      }
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+      // responsive
+      screens: {
+        'max-md': 'screen and (max-width: 768px)',
+        'max-sm': '480px',
+        'max-xs': '320px',
+        'max-2xs': '280px',
+        'max-3xs': '240px',
+        'max-4xs': '200px',
+        'max-5xs': '160px',
+        'max-6xs': '120px',
+        'max-7xs': '80px',
+        'max-8xs': '40px',
+      },
     },
   },
   plugins: [],

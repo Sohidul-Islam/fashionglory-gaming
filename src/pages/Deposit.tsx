@@ -157,12 +157,18 @@ export const Deposit: React.FC = () => {
                 <img src={method.icon} alt={method.name} />
               </div>
               <div className="method-info">
-                <h3>{method.name}</h3>
+                <h3 className="md:text-base text-sm m-0">{method.name}</h3>
                 <div className="method-limits">
-                  <p>Min: ৳{method.minAmount.toLocaleString()}</p>
-                  <p>Max: ৳{method.maxAmount.toLocaleString()}</p>
+                  <p className="md:text-base text-sm m-0">
+                    Min: ৳{method.minAmount.toLocaleString()}
+                  </p>
+                  <p className="md:text-base text-sm">
+                    Max: ৳{method.maxAmount.toLocaleString()}
+                  </p>
                 </div>
-                <button className="deposit-btn">Deposit Now</button>
+                <button className="deposit-btn md:text-base text-sm">
+                  Deposit Now
+                </button>
               </div>
             </div>
           ))}

@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
     <div>
       <nav className="main-navbar">
         <div className="navbar-container">
-          <div className="navbar-left">
+          <div className="navbar-left ">
             <NavLink to="/">
               <div className="brand">
                 <Logo />
@@ -172,16 +172,15 @@ export const Navbar: React.FC = () => {
             <div className="user-balance">
               <div className="balance-item">
                 <WalletIcon />
-                {showBalance ? (
-                  <span>৳1000</span>
-                ) : (
-                  null
-                )}
+                {showBalance ? <span>৳1000</span> : null}
 
-                <span onClick={() => setShowBalance(!showBalance)} style={{
-                  color: "white !important"
-                }}>
-                {showBalance ? <EyeHideIcon /> : <EyeShowIcon />}
+                <span
+                  onClick={() => setShowBalance(!showBalance)}
+                  style={{
+                    color: "white !important",
+                  }}
+                >
+                  {showBalance ? <EyeHideIcon /> : <EyeShowIcon />}
                 </span>
               </div>
             </div>

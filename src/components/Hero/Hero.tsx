@@ -36,7 +36,7 @@ const heroSlides = [
 
 export const Hero: React.FC = () => {
   return (
-    <div className="hero-section">
+    <div className="hero-section !mt-[70px] lg:!mt-[100px]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={0}

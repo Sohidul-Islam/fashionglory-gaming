@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@types/swiper": "^6.0.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.3",
     "sass": "^1.69.0",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

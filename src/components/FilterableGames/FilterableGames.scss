@@ -1,0 +1,106 @@
+.filterable-games {
+  padding: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .games-header {
+    margin-bottom: 24px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .filter-controls {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .category-tabs {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+          height: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 4px;
+        }
+
+        .category-tab {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 8px 16px;
+          color: #ffffff;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+          font-size: 14px;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          &.active {
+            background: #ff9f1c;
+            border-color: #ff9f1c;
+          }
+        }
+      }
+    }
+  }
+
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 8px;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .filterable-games {
+    padding: 16px;
+
+    .games-header {
+      h2 {
+        font-size: 20px;
+      }
+
+      .filter-controls {
+        gap: 12px;
+
+        .category-tabs {
+          .category-tab {
+            padding: 6px 12px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

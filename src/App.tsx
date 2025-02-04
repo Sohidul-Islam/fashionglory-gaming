@@ -22,15 +22,17 @@ import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
     <BrowserRouter>
-      <div className="navbar-container">
-        <TopBar />
-        <Navbar />
+      <div className="app-container">
+        <div className="navbar-container">
+          <TopBar />
+          <Navbar />
+        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/deposit" element={<Deposit />} />
+        </Routes>
+        <Footer />
       </div>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/deposit" element={<Deposit />} />
-      </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
